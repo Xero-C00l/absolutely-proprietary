@@ -7,13 +7,16 @@ Proprietary package detector for arch-based distros. Compares your installed pac
 https://aur.archlinux.org/packages/absolutely-proprietary/
 
 # Install
-`git clone https://github.com/vmavromatis/absolutely-proprietary.git`
-`cd absolutely-proprietary`
+`git clone https://github.com/vmavromatis/absolutely-proprietary.git` <br />
+`cd absolutely-proprietary`<br />
+`makepkg`<br />
+`sudo pacman -U absolutely-proprietary-git-r92.632ebf7-1-any.pkg.tar.zst`
 # Update
-`cd absolutely-proprietary`
+`cd absolutely-proprietary`<br />
 `git pull https://github.com/vmavromatis/absolutely-proprietary.git`
+
 # Run
-`python absolutely_proprietary/__init__.py [arguments]`
+`absolutely-proprietary [arguments]`
 
 Explanation of terms:
 - *nonfree*: This package is blatantly nonfree software.
