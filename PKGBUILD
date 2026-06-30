@@ -14,13 +14,13 @@ source=("git+https://github.com/vmavromatis/${_pkgname}.git")
 md5sums=('SKIP')
 
 pkgver() {
-    cd "${_gitname}"
+    cd "absolutely-proprietary"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
-  cd "${_gitname}"
+  cd "absolutely-proprietary"
   python setup.py install --prefix=/usr --root="$pkgdir/" --optimize=1
-  install -Dm644 "$srcdir/${_gitname}/LICENSE.md" \
+  install -Dm644 "$srcdir/absolutely-proprietary/LICENSE" \
                  "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
